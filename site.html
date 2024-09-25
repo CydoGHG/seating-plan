@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom Seat Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for retro icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+
+    <div class="container">
+        <h1 data-translate="title">Classroom Seat Assignment</h1>
+
+
+        <form id="studentForm">
+            <label for="studentCount" data-translate="num_students">Number of students:</label>
+            <input type="number" id="studentCount" name="studentCount" min="1" max="32" required><br><br>
+
+            <label for="studentFile" data-translate="upload_file">Upload student data file:</label>
+            <input type="file" id="studentFile" name="studentFile" accept=".txt"><br><br>
+
+            <div id="studentInputs"></div>
+
+            <button type="submit">
+                <i class="fas fa-chalkboard-teacher"></i> 
+                <span data-translate="assign_seats">Assign Seats</span>
+            </button>
+            <button id="downloadStudentInfo">
+                <i class="fas fa-download"></i> 
+                <span data-translate="download_info">Download Student Info</span>
+            </button>
+            <button id="downloadSeatingPlan">
+                <i class="fas fa-map"></i> 
+                <span data-translate="download_plan">Download Seating Plan</span>
+            </button>
+        </form>
+    </div> 
+    
+    <div id="classroom"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
